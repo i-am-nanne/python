@@ -1,13 +1,23 @@
-#******** 11. RANGES ********
+#******** 12. FUNCTIONS ********
+#	They are basically used for creating a block of code which
+#	can be used and called upon when we needed
 #	
-#	range(start,stop,step)
+#	def function_name():
+#		code to execute	
+#	 
+#	def function_name(arguments):
+#		code to execute
 #
-# 	when you pass three values to range it consider first value
-# 	as start point and second value as end point(which is not 
-# 	inclued) and third value as step(increament) 
+#	def function_name(arguments=default_value):
+#		code to execute
+#	
+#	def function_name():
+#		code to execute
+#		return some_value
+#
 
-#reversing the list using the range
-
-burgers=["beef","chicken","veg","supreme","double"]
-for r in range(len(burgers)-1,-1,-1):
-	print(r,burgers[r])
+def greet():
+	print("Hello welcome")
+	
+greet()
+greet()
