@@ -6,5 +6,6 @@
 # 	as start point and second value as end point(which is not 
 # 	inclued) and third value as step(increament) 
 
-for r in range(10,20,2):
-	print(r)
+burgers=["beef","chicken","veg","supreme","double"]
+for r in range(len(burgers)):
+	print(r,burgers[r])
