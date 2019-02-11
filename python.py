@@ -16,11 +16,8 @@
 #		return some_value
 #
 
-def greet(name="nanne",time="morning"):
-	print(f"Hello {name} ! Good {time}")
-
-
-greet("hussain","afternoon")
-greet(name="john")	
-greet(time="evening")
-greet()
+def square(num):
+	return num*num
+	
+temp=square(10)
+print(temp)
