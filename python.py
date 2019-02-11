@@ -13,5 +13,5 @@
 #
 #	for loops also follow indent format
 temp_list=["nanne","hussain","john","william","watson"]
-for i in temp_list:
+for i in temp_list[1:3]:
 	print(i)
