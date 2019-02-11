@@ -6,6 +6,8 @@
 # 	as start point and second value as end point(which is not 
 # 	inclued) and third value as step(increament) 
 
+#reversing the list using the range
+
 burgers=["beef","chicken","veg","supreme","double"]
-for r in range(len(burgers)):
+for r in range(len(burgers)-1,-1,-1):
 	print(r,burgers[r])
