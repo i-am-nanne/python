@@ -16,8 +16,7 @@
 #		return some_value
 #
 
-def greet():
-	print("Hello welcome")
+def greet(name,time):
+	print(f"Hello {name} ! Good {time}")
 	
-greet()
-greet()
+greet("nanne","morning")
