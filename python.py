@@ -1,17 +1,21 @@
-#	for(temp_variable in list):
-#		code to execute
-#		
-#	for(temp_variable in list):
-#		if(temp_variable==some_condition):
-#			break
-#
-#	for(temp_variable in list[start_index:end_index]):
+#	while(condition):
 #		code to execute
 #	
-#	for temp_variable in range(start,stop,step):
-#		code to execute
+#	white(condition):
+#		if(condition):
+#			break
+#	
+#	while(condition):
+#		if(condition):
+#			continue
+#	
+#********INFINITE LOOP **********
+#	while(True):
+#	  code to execute
 #
-#	for loops also follow indent format
-temp_list=["nanne","hussain","john","william","watson"]
-for i in temp_list[1:3]:
-	print(i)
+
+s=0
+e=20
+while(s<=e):
+	print(s)
+	s+=1
