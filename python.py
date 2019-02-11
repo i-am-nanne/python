@@ -1,29 +1,10 @@
-#	while(condition):
-#		code to execute
+#******** 11. RANGES ********
 #	
-#	white(condition):
-#		if(condition):
-#			break
-#	
-#	while(condition):
-#		if(condition):
-#			continue
-#	
-#********INFINITE LOOP **********
-#	while(True):
-#	  code to execute
+#	range(start,stop,step)
+#
+# 	when u pass only one value to range it consider
+#	it as end point(which is not inclued) and start from 0 
+#	and step 1
 
-
-#printing even numbers below 10
-
-s=0
-e=20
-while(s<=e):
-	if(s==0):
-		s=s+1
-		continue
-	if(s%2==0):
-		print(s)
-	if(s==10):
-		break
-	s=s+1
+for r in range(10):
+	print(r)
