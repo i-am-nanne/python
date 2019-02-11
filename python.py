@@ -12,6 +12,6 @@
 #		code to execute
 #
 #	for loops also follow indent format
-
-for i in range(0,10,3):
+temp_list=["nanne","hussain","john","william","watson"]
+for i in temp_list:
 	print(i)
