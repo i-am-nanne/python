@@ -14,8 +14,5 @@
 #	  code to execute
 #
 
-s=0
-e=20
-while(s<=e):
-	print(s)
-	s+=1
+while(True):
+	print("something")
