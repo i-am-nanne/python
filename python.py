@@ -1,20 +1,17 @@
-#	if(condition):
+#	for(temp_variable in list):
 #		code to execute
-#	elif(condition):
+#		
+#	for(temp_variable in list):
+#		if(temp_variable==some_condition):
+#			break
+#
+#	for(temp_variable in list[start_index:end_index]):
 #		code to execute
-#	.	
-#	.
-#	etc
-#	else(condition):
+#	
+#	for temp_variable in range(start,stop,step):
 #		code to execute
+#
+#	for loops also follow indent format
 
-#	Python follows indent format so we need to statement should be
-#		indented
-
-num=int(input("Enter the number "))
-if(num<=100):
-	print("The inputed number is less than or equal to 100")
-elif(num<=200):
-	print("The inputed number is less than or equal to 200")
-else:
-	print("The number is greater than 100 and 200")
+for i in range(0,10,3):
+	print(i)
