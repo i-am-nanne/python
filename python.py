@@ -11,8 +11,10 @@
 #	Python follows indent format so we need to statement should be
 #		indented
 
-age=int(input("Enter the age "))
-if(age>=18):
-	print("You can apply for voter id")
+num=int(input("Enter the number "))
+if(num<=100):
+	print("The inputed number is less than or equal to 100")
+elif(num<=200):
+	print("The inputed number is less than or equal to 200")
 else:
-	print("Sorry!, you can not apply for voter id")
+	print("The number is greater than 100 and 200")
