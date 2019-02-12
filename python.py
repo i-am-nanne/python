@@ -6,9 +6,12 @@
 var_global="global"
 
 def print_var():
+	global var_global
 	var_global="local"
-	# here the var_global is override with the local var_global
-	# variable so it will print local
+	
+	# the global keyword is used to convert the local variable
+	# into global variable
+	
 	print(var_global)
 	
 print_var()	
