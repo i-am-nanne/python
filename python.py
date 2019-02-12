@@ -1,23 +1,13 @@
-#******** 12. FUNCTIONS ********
-#	They are basically used for creating a block of code which
-#	can be used and called upon when we needed
+#******** 13. SCOPE ********
+#	Scope define the area/zone of a variable can be accessed
+#	The global variable can be accessed everywhere
+#	The local variable can be accessed only with in the function
 #	
-#	def function_name():
-#		code to execute	
-#	 
-#	def function_name(arguments):
-#		code to execute
-#
-#	def function_name(arguments=default_value):
-#		code to execute
-#	
-#	def function_name():
-#		code to execute
-#		return some_value
-#
 
-def square(num):
-	return num*num
+var_global="Printing the global variable"
+
+def print_var():
+	print(var_global)
 	
-temp=square(10)
-print(temp)
+print_var()	
+print(var_global)
