@@ -4,10 +4,14 @@
 #	The local variable can be accessed only with in the function
 #	
 
-var_global="Printing the global variable"
-
 def print_var():
-	print(var_global)
+	var_local="Printing the local variable"
+	print(var_local)
 	
 print_var()	
-print(var_global)
+
+#	here we get error because var_local variable is a local 
+#	variable and it is available only with in the function
+#	so we can not access out side of the function
+
+print(var_local)
