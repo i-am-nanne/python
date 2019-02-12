@@ -3,15 +3,14 @@
 #	The global variable can be accessed everywhere
 #	The local variable can be accessed only with in the function
 #	
+var_global="global"
 
 def print_var():
-	var_local="Printing the local variable"
-	print(var_local)
+	var_global="local"
+	# here the var_global is override with the local var_global
+	# variable so it will print local
+	print(var_global)
 	
 print_var()	
 
-#	here we get error because var_local variable is a local 
-#	variable and it is available only with in the function
-#	so we can not access out side of the function
-
-print(var_local)
+print(var_global)
