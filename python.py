@@ -1,24 +1,25 @@
-#******** 14. DICTIONARIES ********
-#		Dictionary is a mapping type , basically it is a set
-#	of key value pair
+#******** 15.SET ********
+#	A set is a collection of data(A bit like list) , they dont
+#	allow duplicates
+#	>>> nums=[1,2,3,4,1,2,3]
+# 	>>> set(nums)
+#		[1,2,3,4]
 
-#	{key:value,key:value ...... key:value}
-#					or
-#	dict(key=value,key=value ...... key=value)
+def belt_count(dictionary):
+	belts=list(dictionary.values())
+	for belt in set(belts):
+		num=belts.count(belt)
+		print(f"There are {num} {belt} belts")
+		
+ninja_belts={}
 
-#printing the dictionary
-def print_dict(dictionary):
-	for key,value in dictionary.items():
-		print(f'name : {key} and age : {value}')
-
-person={}
 while(True):
-	name=input("Enter the name ")
-	age=int(input("Enter the age "))
-	person[name]=age
+	ninja_name=input("Enter a ninja name  ")
+	ninja_belt=input("Enter a belt color ")
+	ninja_belts[ninja_name]=ninja_belt
 	
-	one_more=input("Do you want to add another ? (y/n) ")
-	if(one_more=='n'):
+	another=input("Add another ? (y/n) ")
+	if(another=='n'):
 		break
-
-print_dict(person)
+	
+belt_count(ninja_belts)
