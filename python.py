@@ -1,19 +1,24 @@
-#******** 13. SCOPE ********
-#	Scope define the area/zone of a variable can be accessed
-#	The global variable can be accessed everywhere
-#	The local variable can be accessed only with in the function
-#	
-var_global="global"
+#******** 14. DICTIONARIES ********
+#		Dictionary is a mapping type , basically it is a set
+#	of key value pair
 
-def print_var():
-	global var_global
-	var_global="local"
-	
-	# the global keyword is used to convert the local variable
-	# into global variable
-	
-	print(var_global)
-	
-print_var()	
+#	{key:value,key:value ...... key:value}
+#					or
+#	dict(key=value,key=value ...... key=value)
 
-print(var_global)
+#printing the dictionary
+def print_dict(dictionary):
+	for key,value in dictionary.items():
+		print(f'name : {key} and age : {value}')
+
+person={}
+while(True):
+	name=input("Enter the name ")
+	age=int(input("Enter the age "))
+	person[name]=age
+	
+	one_more=input("Do you want to add another ? (y/n) ")
+	if(one_more=='n'):
+		break
+
+print_dict(person)
