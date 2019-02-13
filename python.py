@@ -1,25 +1,51 @@
-#******** 15.SET ********
-#	A set is a collection of data(A bit like list) , they dont
-#	allow duplicates
-#	>>> nums=[1,2,3,4,1,2,3]
-# 	>>> set(nums)
-#		[1,2,3,4]
+#******** 16.CLASS ********
+#		Class is a blueprint for how an object should look, it is not
+#	an object itself, only describes how an object look and behave
+#		Then we can create a new "Object" which is based on particular
+#	class and that class is govern how the object behave, what methods
+#	and what attributes it has.
+# 	
+#	To find type of the object
+#	type(argument)
+#	ex:	
+#		type("string")
+#		<class 'str'>
+#******* creating class ********* 
+#	
+#	class Class_name:
+#		def __init__(self):
+#			self.attribute_name=attribute_value
+#			self.attribute_name=attribute_value
+#
+#		def method_name(self):
+#			//some code 			
+#
+#******** create object from the class ********
+#	object_name=Class_name()
+#
 
-def belt_count(dictionary):
-	belts=list(dictionary.values())
-	for belt in set(belts):
-		num=belts.count(belt)
-		print(f"There are {num} {belt} belts")
+#creating class
+class Person:
+	def __init__(self):
+		self.name="nanne"
+		self.age=20
+		self.study="b.tech"
+	
+	def printName(self):
+		return f'Name is {self.name}'
+	
+	def printStudy(self):
+		print(f"He is studing {self.study}")
 		
-ninja_belts={}
+#creating object	
 
-while(True):
-	ninja_name=input("Enter a ninja name  ")
-	ninja_belt=input("Enter a belt color ")
-	ninja_belts[ninja_name]=ninja_belt
-	
-	another=input("Add another ? (y/n) ")
-	if(another=='n'):
-		break
-	
-belt_count(ninja_belts)
+Person1=Person()
+print(Person1.name)
+print(Person1.printName())
+Person1.printStudy()
+
+#creating another object
+
+Person2=Person()
+print("printing second object")
+print("second object age ",Person2.age)
