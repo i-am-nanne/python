@@ -1,51 +1,43 @@
-#******** 16.CLASS ********
-#		Class is a blueprint for how an object should look, it is not
-#	an object itself, only describes how an object look and behave
-#		Then we can create a new "Object" which is based on particular
-#	class and that class is govern how the object behave, what methods
-#	and what attributes it has.
-# 	
-#	To find type of the object
-#	type(argument)
-#	ex:	
-#		type("string")
-#		<class 'str'>
+#******** 17.The init Function ********
+#		The init function is like a constructor, when we create the object
+#	the init function(constructor) will be invoked.	
+#		While creating a new object we didnt pass any argument but it takes
+#	self as the defualt argument and we can also pass some other arguments
+#	while creating the object
+# 
 #******* creating class ********* 
 #	
 #	class Class_name:
-#		def __init__(self):
-#			self.attribute_name=attribute_value
-#			self.attribute_name=attribute_value
+#		def __init__(self,arguments):
+#			self.attribute_name=arguments
 #
 #		def method_name(self):
 #			//some code 			
 #
 #******** create object from the class ********
-#	object_name=Class_name()
+#	object_name=Class_name(arguments)
 #
 
 #creating class
-class Person:
-	def __init__(self):
-		self.name="nanne"
-		self.age=20
-		self.study="b.tech"
-	
-	def printName(self):
-		return f'Name is {self.name}'
-	
-	def printStudy(self):
-		print(f"He is studing {self.study}")
+class Student:
+	def __init__(self,name,age,study):
+		self.name=name
+		self.age=age
+		self.study=study
+
+	def getStudy(self):
+		print("He is studying ",self.study)
 		
 #creating object	
 
-Person1=Person()
-print(Person1.name)
-print(Person1.printName())
-Person1.printStudy()
+student1=Student("nanne",20,"B.tech")
+print("Name of the student",student1.name)
+print("Age of the student",student1.age)
+student1.getStudy()
 
 #creating another object
 
-Person2=Person()
-print("printing second object")
-print("second object age ",Person2.age)
+student2=Student("john",22,"Degree")
+print("Name of the student",student2.name)
+print("Age of the student",student2.age)
+student2.getStudy()
