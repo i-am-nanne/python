@@ -15,8 +15,8 @@
 #
 #
 
-import module_example
+from module_example import *
 
-print(module_example.add(10,20))
-print(module_example.sub(20,10))
-print(module_example.mult(10,20))
+print(add(20,50))
+print(sub(50,20))
+print(mult(20,50))
