@@ -1,107 +1,22 @@
-#******** 18.Methods and Attributes ********
-#	Attributes:
-#		1.instance attributes
-#		2.class attributes
+#************* 19. Modules and Packages **********
+#	Module:	Just a python file
+#	Package : Collection of modules
 #
-#	Methods:
-#		1.instance methods
-#		2.class Methods ( @classmethod )
-#		3.static methods ( @staticmethod )
-#
-#
-#	class Class_name:
-#		class_variable_name=class_variable_value
-#		def __init__(self,arg):
-#			self.variable_name=arg
+#	To import the module there are two ways:
+#	1.
+#		import module_name(nothing but filename)
+#		#to use the functions or values in the moudle
+#		module_name.function_name() (or) module_name.variable_name
 #		
-#		def instance_Method(self):
-#			//some code to execute
-#
-#		@classmethod
-#		def class_method_name(cls):
-#			//some code to execute
-#
-#		@staticmethod
-#
-#		def static_method_name(arg):
-#			//some code to execute
+#	2.
+#		from module_name import * (# to import all)
+#		from module_name import specific_function_name
+#		specific_function_name()
 #
 #
-#	NOTE:
-#	->	The instance methods and instance attributes can be accesed only by using
-#	the object name
-#	->	The class methods and class attributes can be accesed by both object name
-#	and class name
-#	-> The static methods can be accesed by both object name and class name
 
-class Student:
-	#class attribute
-	college="IIIT RK valley"
+import module_example
 
-	def __init__(self,name,age,study):
-		#instance attributes
-		self.name=name
-		self.age=age
-		self.study=study
-
-	#instance methods
-	def getStudy(self):
-		print("He is studying",self.study)
-
-	#class method
-	@classmethod
-	def getCollege(cls):
-		print(f"He is studying in {cls.college}")
-
-	#static method
-	@staticmethod
-	def aboutStudies(performance="good"):
-		print("He is studying ",performance)
-
-
-#creating object
-
-student1=Student("nanne",20,"B.tech")
-#printing instance attributes
-print(student1.name)
-print(student1.age)
-
-#printing class attributes using object name
-print(student1.college)
-
-#printing class attributes using class name
-print(Student.college)
-
-#printing the instance method
-student1.getStudy()
-
-#printing class methods using object name
-student1.getCollege()
-
-#printing class methods using class name
-Student.getCollege()
-
-#printing static methods using the object name
-student1.aboutStudies()
-
-#printing static methods using the class name
-Student.aboutStudies()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(module_example.add(10,20))
+print(module_example.sub(20,10))
+print(module_example.mult(10,20))
