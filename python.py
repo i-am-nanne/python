@@ -1,35 +1,38 @@
-#************* 19. Modules and Packages **********
-#	Module:	Just a python file
-#	Package : Collection of modules
-#	
-#	Module:
-#	To import the module there are two ways:
-#	1.
-#		import module_name(nothing but filename)
-#		#to use the functions or values in the moudle
-#		module_name.function_name() (or) module_name.variable_name
-#		
-#	2.
-#		from module_name import * (# to import all)
-#		from module_name import specific_function_name
-#		specific_function_name()
-#
-#	Package:
-#		For creating a package we need to choose a folder then we add a file named
-#	__init__.py file and then we add the python files that are going to be used
-#	as modules
-#	
-#	To import the package
-#	from package_name.module_name import *
+#************** 20. Bar Tab Calculator *********
 #
 #
 
-from test.module_example import *
-from test.print_some_stuff import *
-print(add(20,50))
-print(sub(50,20))
-print(mult(20,50))
-print("invoking the the fun function")
-fun()
-print("invoking the getAuthorName function")
-getAuthorName()
+class Tab:
+	menu={
+		"wine":5,
+		"beer":3,
+		"soft_drink":2,
+		"chicken":10,
+		"beef":15,
+		"veggie":12,
+		"desert":6
+	}
+
+	def __init__(self):
+		self.total=0
+		self.items=[]
+
+	def add(self,item):
+		self.items.append(item)
+		self.total=self.total+self.menu[item]
+
+	def printBill(self,tax,service):
+		tax=(tax/100)*self.total
+		service=(service/100)*self.total
+		total=self.total+tax+service
+
+		for item in self.items:
+			print(f"{item:10} ${self.menu[item]}")
+		print(f"{'service':10} ${service}")
+		print(f"{'tax':10} ${tax}")
+		print(f"{'Total':10} ${total}")
+
+table1=Tab()
+table1.add("wine")
+table1.add("beef")
+table1.printBill(10,10)
