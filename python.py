@@ -1,17 +1,18 @@
 #************** 21. List Comprehensions *********
 #	
 
-#Normal way to double the list values
-nums=[12,11,43,15,30]
-double_nums=[]
+#Normal way to square the even nums only
+nums=[1,2,3,4,5,6,7,8,9]
+square_nums=[]
 for num in nums:
-	double_nums.append(num*2)
+	if(num**2%2==0):
+		square_nums.append(num**2)
 print(nums)
-print(double_nums)
+print(square_nums)
 
-#comprehension way to double the list values
+#comprehension way to square the even nums only
 
-nums_comp=[20,2,3,8,19]
-double_nums_comp=[ num*2 for num in nums_comp ]
+nums_comp=[1,2,3,4,5,6,7,8,9]
+square_nums_comp=[ num**2 for num in nums_comp if num**2%2==0 ]
 print(nums_comp)
-print(double_nums_comp)
+print(square_nums_comp)
