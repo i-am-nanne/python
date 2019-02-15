@@ -1,38 +1,17 @@
-#************** 20. Bar Tab Calculator *********
-#
-#
+#************** 21. List Comprehensions *********
+#	
 
-class Tab:
-	menu={
-		"wine":5,
-		"beer":3,
-		"soft_drink":2,
-		"chicken":10,
-		"beef":15,
-		"veggie":12,
-		"desert":6
-	}
+#Normal way to double the list values
+nums=[12,11,43,15,30]
+double_nums=[]
+for num in nums:
+	double_nums.append(num*2)
+print(nums)
+print(double_nums)
 
-	def __init__(self):
-		self.total=0
-		self.items=[]
+#comprehension way to double the list values
 
-	def add(self,item):
-		self.items.append(item)
-		self.total=self.total+self.menu[item]
-
-	def printBill(self,tax,service):
-		tax=(tax/100)*self.total
-		service=(service/100)*self.total
-		total=self.total+tax+service
-
-		for item in self.items:
-			print(f"{item:10} ${self.menu[item]}")
-		print(f"{'service':10} ${service}")
-		print(f"{'tax':10} ${tax}")
-		print(f"{'Total':10} ${total}")
-
-table1=Tab()
-table1.add("wine")
-table1.add("beef")
-table1.printBill(10,10)
+nums_comp=[20,2,3,8,19]
+double_nums_comp=[ num*2 for num in nums_comp ]
+print(nums_comp)
+print(double_nums_comp)
