@@ -1,33 +1,23 @@
-"""********** 23. FILTERS ********
-		Filters gives us an easy way to take a collection
-	and filter out some other values based on function result
-	this gives us filter colletion
+"""********** 24. LAMBDAs ********
+	Lamdas are bit like anonymous function which means they
+don't have a name or any kind of identifier
+syn:
+	lambda argument,argument:
+		/code
+ex:
+	lambda x,y:
+		x*y
+
+	it is same as
+
+	def mul(x,y):
+		return x*y
+
 """
-# finding the even numbers using filters
+# normal way to square the list items
 
-def even_num(num):
-	return num%2==0		# return true or false 
+def square(num):
+	return num*num
 
-nums=[1,2,3,4,5,6,7,8,9,10]
-print(list(filter(even_num,nums)))
-
-
-
-"""
-#comprehension way to find the even numbers
-
-nums=[1,2,3,4,5,6,7,8,9,10]
-evenNums=[num for num in nums if(num%2==0)]
-print(evenNums)
-"""
-
-""" 
-#	Normal way to find the even numbers in a list
-
-nums=[1,2,3,4,5,6,7,8,9,10]
-evenNums=[]
-for num in nums:
-	if(num%2==0):
-		evenNums.append(num)
-print(evenNums)
-"""
+nums=[1,2,3,4,5]
+print(list(map(square,nums)))
