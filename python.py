@@ -6,3 +6,6 @@ l=[
 ]
 with open("write.txt","w") as write_file:
 	write_file.writelines(l)
+
+with open("write.txt","a") as write_file:
+	write_file.writelines(l)
