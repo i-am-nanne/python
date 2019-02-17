@@ -1,7 +1,7 @@
 #********** 26. Reading files ********
 
-text_file=open("text.txt")
-#store the each line as item in the list
-lines=text_file.readlines()
-print(lines)
-text_file.close()
+file=open("text.txt")
+file.seek(0)
+#read takes numbers of chareters to read
+print(file.read(10))
+file.close()
