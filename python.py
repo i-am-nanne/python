@@ -1,7 +1,7 @@
 #********** 26. Reading files ********
 
 text_file=open("text.txt")
-for line in text_file:
-	print(line.rstrip())
-
+#store the each line as item in the list
+lines=text_file.readlines()
+print(lines)
 text_file.close()
