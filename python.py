@@ -1,29 +1,33 @@
-"""********** 24. LAMBDAs ********
-	Lamdas are bit like anonymous function which means they
-don't have a name or any kind of identifier
-syn:
-	lambda argument,argument:
-		/code
-ex:
-	lambda x,y:
-		x*y
+"""********** 25. DECORATORS ********
+	Decorators basically extends the behaviour of functions,that
+ussued on without modifying the function itself
+	
+	def decorator_name(function):
+		def wrapper_function():
+			//code to execute before the function
+			function()
+			//code to execute after the function
+		return wrapper_function
+	
+	@decorator_name
+	def function():
+		//code
 
-	it is same as
-
-	def mul(x,y):
-		return x*y
-
+	@decorator_name
 """
-#by using the lambdas
-nums=[1,2,3,4,5,6,7,8,9,10]
-print(list(map(lambda x:x*x,nums)))
 
-"""
-# normal way to square the list items
+def wish(s):
+	def wrapper():
+		print("welcome to the city")
+		s()
+		print("Thank you for visiting ! visit again")
 
-def square(num):
-	return num*num
+	return wrapper()
 
-nums=[1,2,3,4,5]
-print(list(map(square,nums)))
-"""
+@wish
+def jmd_city():
+	print("This is jmd city")
+
+@wish
+def pdtr_city():
+	print("This is pdtr city")
